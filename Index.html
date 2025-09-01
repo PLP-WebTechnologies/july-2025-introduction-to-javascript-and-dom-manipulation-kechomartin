@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Manipulation Assignment</h1>
+        <p>Demonstrating Variables, Conditionals, Functions, Loops, and DOM Interactions</p>
+    </header>
+    
+    <main>
+        <section id="part1">
+            <h2>Part 1: Variables and Conditionals</h2>
+            <div class="code-block">
+                <p>// Variable declarations and conditional examples</p>
+                <p>let userStatus = 'active';</p>
+                <p>const userAge = 25;</p>
+                <p>let discountEligible = false;</p>
+                <br>
+                <p>// Conditional logic</p>
+                <p>if (userAge >= 18) {</p>
+                <p>  console.log('User is an adult');</p>
+                <p>} else {</p>
+                <p>  console.log('User is a minor');</p>
+                <p>}</p>
+                <br>
+                <p>if (userStatus === 'active' && userAge > 21) {</p>
+                <p>  discountEligible = true;</p>
+                <p>}</p>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Check User Status</h3>
+                <p>Enter your age to check your status:</p>
+                <input type="number" id="ageInput" placeholder="Enter your age">
+                <button id="checkStatusBtn">Check Status</button>
+                <div class="output" id="statusOutput"></div>
+            </div>
+        </section>
+        
+        <section id="part2">
+            <h2>Part 2: Custom Functions</h2>
+            <div class="code-block">
+                <p>// Function 1: Calculate area of a rectangle</p>
+                <p>function calculateArea(width, height) {</p>
+                <p>  return width * height;</p>
+                <p>}</p>
+                <br>
+                <p>// Function 2: Change background color</p>
+                <p>function changeBackgroundColor(elementId, color) {</p>
+                <p>  const element = document.getElementById(elementId);</p>
+                <p>  if (element) {</p>
+                <p>    element.style.backgroundColor = color;</p>
+                <p>  }</p>
+                <p>}</p>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Function Demonstrations</h3>
+                <p>Calculate the area of a rectangle:</p>
+                <input type="number" id="widthInput" placeholder="Width">
+                <input type="number" id="heightInput" placeholder="Height">
+                <button id="calculateAreaBtn">Calculate Area</button>
+                <div class="output" id="areaOutput"></div>
+                
+                <p>Change the color of the box below:</p>
+                <div id="colorBox" class="color-box"></div>
+                <br>
+                <button class="color-btn" data-color="#ff4757">Red</button>
+                <button class="color-btn" data-color="#2ed573">Green</button>
+                <button class="color-btn" data-color="#1e90ff">Blue</button>
+                <button class="color-btn" data-color="#ffa502">Orange</button>
+            </div>
+        </section>
+        
+        <section id="part3">
+            <h2>Part 3: Loop Examples</h2>
+            <div class="code-block">
+                <p>// Loop 1: For loop to count numbers</p>
+                <p>for (let i = 1; i <= 5; i++) {</p>
+                <p>  console.log('Count: ' + i);</p>
+                <p>}</p>
+                <br>
+                <p>// Loop 2: While loop to generate user list</p>
+                <p>let count = 0;</p>
+                <p>while (count < 5) {</p>
+                <p>  console.log('User ' + (count + 1));</p>
+                <p>  count++;</p>
+                <p>}</p>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Loop Demonstrations</h3>
+                <p>Click to generate a list of users using a loop:</p>
+                <button id="generateUsersBtn">Generate Users</button>
+                <ul class="user-list" id="userList"></ul>
+                
+                <p>Count from 1 to 10 with a loop:</p>
+                <button id="countNumbersBtn">Start Counting</button>
+                <div class="output" id="countOutput"></div>
+            </div>
+        </section>
+        
+        <section id="part4">
+            <h2>Part 4: DOM Interactions</h2>
+            <div class="code-block">
+                <p>// DOM Interaction 1: Changing text content</p>
+                <p>document.getElementById('textElement').textContent = 'New text!';</p>
+                <br>
+                <p>// DOM Interaction 2: Adding a CSS class</p>
+                <p>document.getElementById('myElement').classList.add('highlight');</p>
+                <br>
+                <p>// DOM Interaction 3: Creating and appending new elements</p>
+                <p>const newElement = document.createElement('div');</p>
+                <p>newElement.textContent = 'Dynamically created element';</p>
+                <p>document.body.appendChild(newElement);</p>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>DOM Interaction Demonstrations</h3>
+                <p id="textElement">This is the original text. Click the button to change me!</p>
+                <button id="changeTextBtn">Change Text</button>
+                
+                <p id="styleElement">This element will change style when you click the button.</p>
+                <button id="toggleStyleBtn">Toggle Style</button>
+                
+                <p>Add a new item to the list:</p>
+                <input type="text" id="newItemInput" placeholder="Enter item text">
+                <button id="addItemBtn">Add Item</button>
+                <ul class="user-list" id="dynamicList">
+                    <li>Initial item 1</li>
+                    <li>Initial item 2</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>JavaScript DOM Manipulation Assignment - Completed as part of coursework</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
